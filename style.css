@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+@font-face {
+    font-family:"DMSerif";
+    src: url(./assest/fonts/DM_Serif_Display/DMSerifDisplay-Regular.ttf);
+}
+
+body {
+    font-family: "DMSerif", Verdana, Geneva, Tahoma, sans-serif; 
+    background: url(./assest/image/bg.jpeg) center/cover;
+    /* VH = 100% de la taille de l'écran (viewport height)*/
+    min-height: 100vh;
+}
+
+/* L'étoile donne du style pour tous les éléments */
+/* * {
+    margin : 0;
+    padding: 0;
+} */
+
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    /* Les tailles de polices doivent être en REM 1rem = 16px */
+    font-size: 2.5rem;
+    text-shadow: 03px 03px 03px rgba(0, 0, 0, 0.548);
+    color: rgba(194, 48, 22, 0.842);
+    text-decoration: underline 01px;
+    font-family: "Oswald", sans-serif;
+    margin-block: 25px;
+}
+    
+main {
+    /* Tout pour faire une boite */
+    /* Hauteur heigt tjr en pixel et largeur width en % */
+    min-height: 400px;
+    width: 90%;
+    background:rgba(171, 167, 167, 0.552) ;
+    /* Centrer une boite */
+    margin: 0 auto;
+    border: 2px solid rgb(232, 156, 15);
+    /* pour arrondir les angles */
+    border-radius: 10px;
+    box-shadow: 03px 03px 03px 03px rgba(0, 0, 0, 0.548);
+    /* quand on met une seule valeur elle se met partout  */
+    padding: 15px;
+}
+
+
+h2 {
+    letter-spacing: 2px;
+    color: rgb(182, 121, 7);
+    text-decoration: underline 01px;
+    margin: 0;
+}
+
+    .flexbox,
+    .grid {
+    border: 2px solid rgba(194, 48, 22, 0.842);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px;
+    }
+
+    /* /* FLEXBOX  */
+    /* Sert a répartir équitablement des élémnts sur la page */ 
+   .flexbox ul {
+    padding: 0;
+    /* "Display flex" instale les blocs horizontalement */
+    display: flex;
+    justify-content: space-around;
+   }
+
+   .flexbox li {
+    list-style-type: none;
+    height: 60px;
+    width: 160px;
+    margin: 10px;
+    padding: 10px;
+    background: rgb(233, 166, 42);
+    /* Centrer un unique élément verticalement et horizontalement */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   }
+
+   /* GRID */
+   .grid-container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+   }
+
+   .grid img {
+    width: 80%;
+    margin-top: 20px;
+   }
+
+   form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+    "i1 i2"
+    "ta ta"
+    "vi bt";
+   }
+
+   input, textarea {
+    margin: 5px;
+    border: 1px solid rgb(182, 121, 7);
+    padding: 03%;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    }
+
+   
+   textarea {
+    grid-area: ta;
+    height: 40px;
+    resize: none;
+   }
+
+   #btn-submit {
+    grid-area: bt;
+    cursor: pointer;
+    background: rgb(233, 166, 42);
+   }
+
+   #btn-submit:hover {
+    background: rgba(182, 121, 7, 0.523);
+    color: white;
+   }
